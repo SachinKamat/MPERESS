@@ -1,0 +1,14 @@
+option echo off 
+option batch on 
+option confirm off 
+open sftp://E000459:zA1045%23xW%25@10.106.87.5/ -hostkey="ecdsa-sha2-nistp256 256 3b:29:9d:eb:b7:64:e9:69:25:24:bd:8f:e7:be:11:d4"
+
+#Change LOCAL directory cd "C:\temp\"
+
+#copy an entire folder 
+#put -nopermissions -nopreservetime "asubfolder"
+
+#copy an individual file 
+put -nopermissions -nopreservetime -delete "C:\apache\src\Scripts\COSS*.csv" /pub/693/in/
+
+exit

@@ -1,0 +1,29 @@
+[header]
+* Input parameters for MQPut2 program *
+** name of the queue and queue manager
+* to write messages to
+qname=PDAST.BIG.PTYSCAN.IN.03
+qmgr=MQSUPPORT.SVRCONN/TCP/10.106.85.21(1420)
+* total number of messages to be written
+* the program will stop after this number of
+* messages has been written
+msgcount=1
+qdepth=500
+qmax=5000
+sleeptime=10
+thinktime=1000
+tune=0
+batchsize=1
+format= "MQHRF2 "
+priority=2
+persist=1
+msgtype=8
+encoding=546
+codepage=1208
+delimiter="#@%@#"
+rfh=N
+RFH_CCSID=1208
+RFH_ENCODING=546
+RFH_NAME_CCSID=1208
+[filelist]
+C:\Workspace\MPERESS (4)\MPERESS_new\src\Scripts\TC99_4_PDA-071C-JC092GB.xml

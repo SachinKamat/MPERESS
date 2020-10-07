@@ -1,0 +1,18 @@
+[header]
+* Input parameters for MQPut2 program *
+** name of the queue and queue manager
+* to write messages to
+qname=POL_POL.BK_CHARACTER.DATA_H
+qmgr=MQREAD.SVRCONN/TCP/10.106.85.13(1414)
+* total number of messages to be written
+* the program will stop after this number of
+* messages has been written
+msgcount=1
+qdepth=500
+qmax=5000
+sleeptime=10
+thinktime=1000
+tune=0
+batchsize=1
+[filelist]
+C:\Users\sachin.kamat\eclipse-workspace\MPERESS\src\Scripts\TC99_4_POL-071C-JC092GB.xml

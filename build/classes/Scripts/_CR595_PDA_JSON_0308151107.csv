@@ -1,0 +1,2 @@
+ref,MessageType,RFH_TrackingNumber,MESSAGEFORMAT,UPUCountry,Barcode,BusinessUnit,MessageId,DeviceId,UserId,ObiId,MS_DATETIME,Latitude,Longitude,EventCode,Altitude,UniqueItemNumber,UpuTrackingNumber,ScanTime,ReceiveTime,SubmissionTime,ManualEntry,FunctionalLocationId,EventReason,WorkProcessCode,TaskId
+TC99_4_PDA-JSON-JC092GB,,TK200003974GB,JSON,JGB,TK200003974GB,RM,b050272e-6d9e-4744-8e55-cf070af2f6e0,3.54E+14,Sachin.kamat,2599,2018-10-28T09:10:00+01:00,0,0,EVCSP,0,,,,,,,3039,23,1,28000021
