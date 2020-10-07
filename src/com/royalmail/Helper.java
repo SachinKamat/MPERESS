@@ -156,7 +156,8 @@ public class Helper extends PageInstance {
 				"\"\"","\"GBP\""});
 		
 		//09 Trailer Record
-		dataLines.add(new String[] { "\"09\"", "\"03\"", "\"06\"" });
+		//The last field here should equal the number of records in the file including the trailer.
+		dataLines.add(new String[] { "\"09\"", "\"03\"", "\"07\"" });
 		try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
 			dataLines.stream().map(Helper::convertToCSV).forEach(pw::println);
 		}
