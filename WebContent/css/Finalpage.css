@@ -17,6 +17,7 @@ h1 {
 label,option,select{	
 font-family: "Comic Sans MS", cursive, sans-serif;
 font-size: 20px;
+margin-left: 20px;
 letter-spacing: 2px;
 word-spacing: 2px;
 color: white;
@@ -41,19 +42,21 @@ text-transform: none;
 input[type=text], select {
   width: 100%;
   padding: 10px 10px;
-  margin: 8px 0;
+  margin: 5px 0;
+  margin-right: 20px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 input[type=checkbox] {
+  zoom:1.5;
   width: 200%;
   padding: 10px 10px;
-  margin: 8px 0;
+  margin: 10px 10px 10px 10px;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 input[type=button]{
@@ -139,4 +142,7 @@ font-style: normal;
 font-variant: normal;
 text-transform: none;
 background-image: url("blue_and_red.jpg");
+}
+#preadvice_text,#mperess1d_text{
+	margin: 10px 0 10px;
 }

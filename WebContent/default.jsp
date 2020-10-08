@@ -577,7 +577,7 @@
 					<td><label for="termsOfDelivery" class="utermsOfDelivery"
 						data-icon="p"> Terms Of Delivery:</label></td>
 					<td><input id="termsOfDelivery" name="termsOfDelivery"
-						type="text" placeholder="eg. DAP" /></td>
+						type="text" placeholder="eg. DDP" /></td>
 				</tr>
 
 				<tr>
@@ -637,16 +637,31 @@
 
 				<tr>
 					<td></td>
-					<td><input type="submit" value="Generate + Submit Preadvice" /></td>
+					<td><input id="submitButton" type="submit" value="Generate + Submit Pre-advice" /></td>
 				</tr>
-
+				<tr>
+					<td><input onchange="selectionChanged(this)" type="checkbox" id="Download" name="Download" value="DownloadTrue" /></td>
+					<td><label for="Download">Download Pre-advice file</label></td>
+					
+				</tr>
 			</table>
-			<div id="preadvice_text" align="center">**Preadvice processing
+			<div id="preadvice_text" align="center">* If you check the box to download the Pre-advice file, it will not be processed to BIG.</div>
+			<div id="preadvice_text" align="center">**Pre-advice processing
 				will take maximum 10 minutes to process. Report immediately if PA
 				failed.</div>
 		</form>
 	</div>
 	<script type="text/javascript">
+		function selectionChanged(element){
+						if(element.checked){
+							submitButton.value = "Generate + Download Pre-advice";
+						}
+						else{
+							submitButton.value = "Generate + Submit Pre-advice"
+						}
+		}
+	
+	
 		function validate() {
 			if (document.getElementById("LocationID").value.length != 6) {
 				alert("Invalid length Location ID, must be 6 characters");
