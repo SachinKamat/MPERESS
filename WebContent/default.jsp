@@ -634,10 +634,16 @@
 					<td><input id="extDescription" name="extDescription"
 						type="text" placeholder="eg. soles made from cork" /></td>
 				</tr>
-
+<tr>
+					<td><label for="sendersVAT" class="usendersVAT" data-icon="p">Sender's
+							VAT number:</label></td>
+					<td><input id="sendersVAT" name="sendersVAT" type="text"
+						placeholder="" /></td>
+				</tr>
 				<tr>
-					<td></td>
-					<td><input id="submitButton" type="submit" value="Generate + Submit Pre-advice" /></td>
+					<td><label id="spacerlabel"> </label></td>
+					<td><input id="submitButton" type="submit"
+						value="Generate + Submit Pre-advice" /></td>
 				</tr>
 				<tr>
 					<td><input onchange="selectionChanged(this)" type="checkbox" id="Download" name="Download" value="DownloadTrue" /></td>
