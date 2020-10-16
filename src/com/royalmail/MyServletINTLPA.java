@@ -92,6 +92,7 @@ public class MyServletINTLPA extends HttpServlet {
 		String UnitWeight = request.getParameter("unitWeight");
 		String Tariff = request.getParameter("tariff");
 		String extUnitDescString =request.getParameter("extDescription");
+		String sendersVAT = request.getParameter("sendersVAT");
 	
 		
 		helper.setMap(Product);
@@ -127,6 +128,7 @@ public class MyServletINTLPA extends HttpServlet {
 		CSVMAP.put("WEIGHT", UnitWeight);
 		CSVMAP.put("TARIFF", Tariff);
 		CSVMAP.put("EXTENDEDDESCRIPTION", extUnitDescString);
+		CSVMAP.put("VAT", sendersVAT);
 		CSVMAP.put("BARCODE", Barcode);
 		CSVMAP.put("UID", UID);
 		
