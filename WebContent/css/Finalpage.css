@@ -53,7 +53,7 @@ input[type=checkbox] {
   zoom:1.5;
   width: 200%;
   padding: 10px 10px;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
