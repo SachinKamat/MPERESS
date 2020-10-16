@@ -142,7 +142,7 @@ public class Helper extends PageInstance {
 		//06 GENERIC INTERNATIONAL ITEM INFORMATION RECORD
 		dataLines.add(new String[] {"\"06\"","\"03\"","\"\"","\""+CSVMAP.get("UID")+"\"","\"\"","\"1.500\"","\"\"","\"\"",
 				"\"GBP\"","\"10200\"","\"\"","\"\"","\"\"","\"10200\"","\"" + CSVMAP.get("DDP") + "\"","\" \"","\"01892 779 110\"",
-				"\"\"","\"284 9995 22\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"",
+				"\"\"","\"" + CSVMAP.get("VAT") + "\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"",
 				"\"\"","\"6047270660\"","\"" + CSVMAP.get("SENDERSEORI") + "\"","\"\"","\"\"","\"\"","\"" + CSVMAP.get("CATEGORY") + "\"","\"" + CSVMAP.get("NATUREOFITEM") + "\"",
 				"\"" + CSVMAP.get("IMPORTERTAXCODE") + "\"",
 				"\"" + CSVMAP.get("TERMSOFDELIVERY") + "\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"\"","\"" + CSVMAP.get("LOCALISEDRECIPIENTNAME") + "\"",
@@ -276,6 +276,7 @@ public class Helper extends PageInstance {
 			
 			//06 Generic International Item Information Record
 			PageInstance.MapForProductINTL.put("DDP", ""); //Field 15
+			PageInstance.MapForProductINTL.put("VAT", "284 9995 22"); //Field 19
 			PageInstance.MapForProductINTL.put("SENDERSEORI", ""); //Field 31
 			PageInstance.MapForProductINTL.put("CATEGORY", "O"); //Field 35
 			PageInstance.MapForProductINTL.put("NATUREOFITEM", "2 BOXES OF SPORTS SHOES"); //Field 36
