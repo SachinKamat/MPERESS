@@ -34,8 +34,10 @@ public class MyServletMperess extends HttpServlet{
 	      String date=request.getParameter("date1d");  
 	      String locationid=request.getParameter("locationID").replaceAll("\\D+","");  
 	      String generateMPER="";
+	      Boolean isPFW=false;
 	      if("PFWtrue".equals(Value)) {
 	    		 System.out.println("checked");
+	    		 isPFW=true;
 	    		 CSV_TEMPLATE_PATH = Paths.get("src/Scripts/_CR595_PDA_MPER_0308151107_PFW.csv");
 	    		 helper.PTP_PATH = Paths.get("src/Scripts/generatePTPMessage15SK_PF.awk");
 	    		 generateMPER = "cmd.exe /C " + helper.GAWK_PATH.toAbsolutePath() + " -v TESTPFWWBARCODE=" + barcode + " -v TESTEVENT=" + eventid + " -v TESTDATE=" + date + " -v LOCATIONID=" + locationid + " -v XMLPATH=" + helper.XML_PATH + " -f " +helper.PTP_PATH.toAbsolutePath() + " <" + CSV_TEMPLATE_PATH.toAbsolutePath();
@@ -58,6 +60,7 @@ public class MyServletMperess extends HttpServlet{
               helper.updateInputFile("1d");
               List<String>Bat_list=PageInstance.updateBatFile();
               Helper.createBat(helper.BAT_FILE,Bat_list);
+              Helper.movefile(PageInstance.XML_PATH_for_Input,false);
 
           } catch (IOException | InterruptedException ex) {
               ex.printStackTrace();

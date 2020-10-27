@@ -1,11 +1,15 @@
 package com.royalmail;
 
 import java.io.*;
+import java.nio.file.CopyOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -18,6 +22,7 @@ import org.apache.poi.ss.usermodel.*;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
@@ -498,6 +503,25 @@ public class Helper extends PageInstance {
 		D2String=D2String+blank;
 		System.out.println(" 2DString "+D2String+ " length "+D2String.length());
 		return D2String;
+	}
+
+	public static void movefile(Path xML_PATH_for_Input, boolean debug) {
+		if(debug) {
+			Path InputPath= Paths.get("C:\\apache\\src\\Scripts\\TC99_4_PDA-071C-JC092GB.xml");
+			Path XML_PATH_for_Destination = Paths.get("C:\\apache\\src\\Scripts\\Debug\\TC99_4_PDA-071C-JC092GB"+new Date().getTime()+".xml");
+			System.out.println("xmlpath "+XML_PATH_for_Destination);
+			CopyOption[] options = new CopyOption[]{
+					  StandardCopyOption.REPLACE_EXISTING,
+					  StandardCopyOption.COPY_ATTRIBUTES
+					}; 
+					try {
+						java.nio.file.Files.copy(InputPath, XML_PATH_for_Destination, options);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		}
+		
 	}
 	
 }
