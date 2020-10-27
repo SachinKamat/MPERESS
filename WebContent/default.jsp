@@ -10,6 +10,7 @@
 <body>
 	<button class="tablink" onclick="openPage('1D', this, 'green')"
 		id="defaultOpen">PDA / STAR2 Scan</button>
+	<button class="tablink" onclick="openPage('International', this, 'green')">PDA International Scan</button>
 	<!-- <button class="tablink" onclick="openPage('2D', this, 'green')">PDA
 		2D Scan</button> -->
 	<button class="tablink" onclick="openPage('Json', this, 'green')">PDA
@@ -106,6 +107,68 @@
 		</form>
 	</div>
 
+	<div id="International" class="tabcontent">
+		<form name="MyServletMperessInternational" action="MyServletMperessInternational"
+			method="post">
+
+			<table id="1D-table-International" align="center">
+				<tr>
+					<td><label for="barcode" class="ubarcode" data-icon="u">
+							Barcode:</label></td>
+					<td><input id="barcode" name="barcode" required="required"
+						type="text" placeholder="TK200004405GB" /></td>
+				</tr>
+				<tr>
+					<td><label for="eventid" class="ueventid" data-icon="p">
+							EventID:</label></td>
+					<td><input id="eventId" name="eventId" required="required"
+						type="text" placeholder="eg. EVDAC" /></td>
+				</tr>
+				<tr>
+					<td><label for="source" class="usourceid" data-icon="p">
+							Event Source:</label></td>
+					<td><input id="source" name="source" required="required"
+						type="text" placeholder="eg. 223-PCS" /></td>
+				</tr>
+				<tr>
+					<td><label for="ldate" class="udate" data-icon="p">
+							Date:</label></td>
+					<td><input type="text" onload="getDate('date1d')"
+						name="date1d" id="date1d"></td>
+					<td><input id="date1dbutton" type="button" value="Update Time"
+						onclick="getDate('date1d')" /></td>
+				</tr>
+				<tr>
+					<td><label for="ReceptacleId" class="uReceptacleId" data-icon="p">
+							EventID:</label></td>
+					<td><input id="ReceptacleId" name="ReceptacleId" required="required"
+						type="text" placeholder="eg. DEFRAANLAMSAAUN40027002000258" /></td>
+				</tr>
+				<tr>
+					<td><label for="selectLocation">Select Location:</label></td>
+					<td><select id="location"
+						onchange="countryChange(this,'locationID');">
+							<option value="empty">Select Location</option>
+							<option value="DO">DO</option>
+							<option value="IMC Mail Centre">IMC Mail Centre</option>
+							<option value="RDC">RDC</option>
+					</select></td>
+
+				</tr>
+				<tr>
+					<td><label for="location">Location ID:</label></td>
+					<td><select id="locationID" name="locationID">
+							<option value="0">Location ID</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Perform Scan" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
 	<div id="1D" class="tabcontent">
 		<form name="MyServletMperess1D" action="MyServletMperess"
 			method="post">
