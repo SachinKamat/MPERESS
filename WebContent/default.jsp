@@ -525,6 +525,9 @@
 								Account</option>
 							<option value="MB101">MB101 - International Business
 								Parcels Print Direct Priority</option>
+						<option value="MTV01">MTV01 - Intl Bus Prcls Trk&Sgn DDP</option>
+							<option value="MPR01">MPR01 - Intl BUS parcels Tracked
+								Boxable CTRY</option>
 					</select></td>
 				</tr>
 			</table>
